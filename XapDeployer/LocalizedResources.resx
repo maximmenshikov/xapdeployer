@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GenreApp" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="GenreGame" xml:space="preserve">
+    <value>Game</value>
+  </data>
+  <data name="ID_CAP_APPOINTMENTS" xml:space="preserve">
+    <value>Appointments</value>
+  </data>
+  <data name="ID_CAP_CAMERA" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="ID_CAP_CONTACTS" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="ID_CAP_FILEVIEWER" xml:space="preserve">
+    <value>File viewing</value>
+  </data>
+  <data name="ID_CAP_GAMERSERVICES" xml:space="preserve">
+    <value>Xbox Live</value>
+  </data>
+  <data name="ID_CAP_IDENTITY_DEVICE" xml:space="preserve">
+    <value>Device identification</value>
+  </data>
+  <data name="ID_CAP_IDENTITY_USER" xml:space="preserve">
+    <value>User identification</value>
+  </data>
+  <data name="ID_CAP_INTEROPSERVICES" xml:space="preserve">
+    <value>Interop services</value>
+  </data>
+  <data name="ID_CAP_ISV_CAMERA" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="ID_CAP_LOCATION" xml:space="preserve">
+    <value>Location services</value>
+  </data>
+  <data name="ID_CAP_MEDIALIB" xml:space="preserve">
+    <value>Multimedia library</value>
+  </data>
+  <data name="ID_CAP_MICROPHONE" xml:space="preserve">
+    <value>Microphone</value>
+  </data>
+  <data name="ID_CAP_NETWORKING" xml:space="preserve">
+    <value>Networking</value>
+  </data>
+  <data name="ID_CAP_NETWORKING_ADMIN" xml:space="preserve">
+    <value>Networking setup</value>
+  </data>
+  <data name="ID_CAP_OEMPUBLICDIRECTORY" xml:space="preserve">
+    <value>OEM</value>
+  </data>
+  <data name="ID_CAP_PHONEDIALER" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="ID_CAP_PUSH_NOTIFICATION" xml:space="preserve">
+    <value>Push-notfications</value>
+  </data>
+  <data name="ID_CAP_RINGTONE_ADD" xml:space="preserve">
+    <value>Ringtones</value>
+  </data>
+  <data name="ID_CAP_SENSORS" xml:space="preserve">
+    <value>Sensors</value>
+  </data>
+  <data name="ID_CAP_WEBBROWSERCOMPONENT" xml:space="preserve">
+    <value>Web-browser</value>
+  </data>
+  <data name="txtAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="txtAlreadyInstalled" xml:space="preserve">
+    <value>Application is already installed. Do you want to update it?</value>
+  </data>
+  <data name="txtAuthor" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="txtCapabilities" xml:space="preserve">
+    <value>Capabilities</value>
+  </data>
+  <data name="txtCurrentVersion" xml:space="preserve">
+    <value>Current version</value>
+  </data>
+  <data name="txtError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="txtFileSize" xml:space="preserve">
+    <value>File size</value>
+  </data>
+  <data name="txtGenre" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+  <data name="txtInstall" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="txtInstalled" xml:space="preserve">
+    <value>Installed</value>
+  </data>
+  <data name="txtInstallError" xml:space="preserve">
+    <value>Unexpected error occured while installing an application</value>
+  </data>
+  <data name="txtInstalling" xml:space="preserve">
+    <value>Installing...</value>
+  </data>
+  <data name="txtNewVersion" xml:space="preserve">
+    <value>New version</value>
+  </data>
+  <data name="txtNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="txtPageAboutFreeLibraries" xml:space="preserve">
+    <value>Following free libraries are used:</value>
+  </data>
+  <data name="txtPageAboutFreeLibrariesThanks" xml:space="preserve">
+    <value>Thanks to their authors and maintainers!</value>
+  </data>
+  <data name="txtPageAboutNotice" xml:space="preserve">
+    <value>This application is provided "AS IS" without any warranties. Author isn't responsible for any damage caused by application usage</value>
+  </data>
+  <data name="txtPageAboutPleaseNote" xml:space="preserve">
+    <value>Please, note:</value>
+  </data>
+  <data name="txtPageAboutTitle" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="txtPublisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="txtSignature" xml:space="preserve">
+    <value>Signature</value>
+  </data>
+  <data name="txtSignatureMissed" xml:space="preserve">
+    <value>Not present</value>
+  </data>
+  <data name="txtSignaturePresent" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="txtUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="txtUpdating" xml:space="preserve">
+    <value>Updating...</value>
+  </data>
+  <data name="txtVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="txtXapDeployerTitle" xml:space="preserve">
+    <value>App installation</value>
+  </data>
+  <data name="txtYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="txtAssociate" xml:space="preserve">
+    <value>Associate</value>
+  </data>
+  <data name="txtGreeting" xml:space="preserve">
+    <value>Use built-in File Browser or any third party file explorer to install XAP files.</value>
+  </data>
+  <data name="txtGreetingAssociate" xml:space="preserve">
+    <value>Associate deployer with XAP files to add a possibility to open XAP files using any file explorer or browser</value>
+  </data>
+  <data name="txtUnassociate" xml:space="preserve">
+    <value>Remove association</value>
+  </data>
+  <data name="txtFileBrowser" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="txtFileIsSigned" xml:space="preserve">
+    <value>File is signed, therefore it cannot be installed. Try to search for that application in Marketplace</value>
+  </data>
+  <data name="txtSelectXap" xml:space="preserve">
+    <value>Select XAP / EXE / EXE7</value>
+  </data>
+  <data name="txtSpecialThanks" xml:space="preserve">
+    <value>Special thanks:</value>
+  </data>
+  <data name="txtNoRootAccess" xml:space="preserve">
+    <value>You don't have root access set up for this application. You can do this by using Full Unlocked ROMs or WP7 Root Tools by Heathcliff74</value>
+  </data>
+  <data name="txtHeathcliffSnippets" xml:space="preserve">
+    <value>and code snippets by Heathcliff74</value>
+  </data>
+  <data name="txtLoading" xml:space="preserve">
+    <value>Reading file...</value>
+  </data>
+  <data name="txtNotStated" xml:space="preserve">
+    <value>Not stated</value>
+  </data>
+  <data name="txtAgree" xml:space="preserve">
+    <value>Agree</value>
+  </data>
+  <data name="txtCaution" xml:space="preserve">
+    <value>caution</value>
+  </data>
+  <data name="txtLicenseResponsibility" xml:space="preserve">
+    <value>Limitation of Liability. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</value>
+  </data>
+  <data name="txtLicenseShort" xml:space="preserve">
+    <value>XAP Deployer - non-commercial project. It is provided AS IS without any warranties. Author isn't responsible for any damage to your device and your data.</value>
+  </data>
+  <data name="txtLicenseWarranty" xml:space="preserve">
+    <value>Disclaimer of Warranty. THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.</value>
+  </data>
+  <data name="txtPageAboutReadMore" xml:space="preserve">
+    <value>Read more...</value>
+  </data>
+  <data name="txtInstallationInProgress" xml:space="preserve">
+    <value>XAP Deployer is still processing this application. If you close deployment window, operation will proceed in background but you will stop seeing an actual progress.
+If you really want to continue, press "OK".</value>
+  </data>
+  <data name="txtWarning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="txtRunExeError" xml:space="preserve">
+    <value>Could not run this EXE file.</value>
+  </data>
+  <data name="txtRunExeOk" xml:space="preserve">
+    <value>Execution completed.</value>
+  </data>
+  <data name="txtNativeWarning" xml:space="preserve">
+    <value>Caution! 
+XAP Deployer cannot check native EXE for viruses and other possible harm. Make sure application was downloaded from a trusted source.
+If you're not sure, don't run it.</value>
+  </data>
+  <data name="txtRun" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="txtUninstall" xml:space="preserve">
+    <value>Uninstall</value>
+  </data>
+  <data name="txtUninstalling" xml:space="preserve">
+    <value>Unintalling...</value>
+  </data>
+  <data name="txtUninstallWarning" xml:space="preserve">
+    <value>Do you really want to uninstall this application?</value>
+  </data>
+  <data name="txtMultiInstall" xml:space="preserve">
+    <value>INSTALLING APPLICATIONS</value>
+  </data>
+  <data name="txtInstallationCompleted" xml:space="preserve">
+    <value>Installation completed</value>
+  </data>
+  <data name="txtInstallationCompletedReport" xml:space="preserve">
+    <value>{0} file(s) installed
+{1} file(s) skipped
+{2} file(s) couldn't be installed because of error</value>
+  </data>
+  <data name="txtStateFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="txtStateInstallationPending" xml:space="preserve">
+    <value>Installation pending</value>
+  </data>
+  <data name="txtStateInstalled" xml:space="preserve">
+    <value>Installed</value>
+  </data>
+  <data name="txtStateInstalling" xml:space="preserve">
+    <value>Installing...</value>
+  </data>
+  <data name="txtStateSkipped" xml:space="preserve">
+    <value>Skipped</value>
+  </data>
+  <data name="txtInstallAll" xml:space="preserve">
+    <value>Install all</value>
+  </data>
+  <data name="txtPageAboutDevoted" xml:space="preserve">
+    <value>This project is devoted to S.D.</value>
+  </data>
+</root>

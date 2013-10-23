@@ -1,0 +1,16 @@
+XAP Deployer v1.6
+
+XAP Deployer is provided AS IS without any warranties.
+Author isn't responsible for any damage to your device and your data.
+
+Terms of usage.
+  1) Source code redistribution is prohibited.
+  2) Source code usage (except extending project) is allowed only after 
+     getting permission from author.
+  3) You can extend this project only if you share modified code with author
+     or post it in original thread.
+  4) Application, as well as its derrivatives, cannot be sold.
+  5) Author can always change terms of usage without any notifications.
+
+
+(C) ultrashot 2011-2013

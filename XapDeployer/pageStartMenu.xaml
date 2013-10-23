@@ -1,0 +1,75 @@
+﻿ <phone:PhoneApplicationPage 
+    x:Class="XapDeployer.PageStartMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+	xmlns:wpe="clr-namespace:WPExtensions;assembly=WPExtensions"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    >
+ 	<phone:PhoneApplicationPage.Resources>
+ 		<Storyboard x:Name="ShowGreetingAnimation">
+ 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lblAppName">
+ 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+ 				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+ 			</DoubleAnimationUsingKeyFrames>
+ 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="lblAppName">
+ 				<EasingDoubleKeyFrame KeyTime="0" Value="-70"/>
+ 				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+ 			</DoubleAnimationUsingKeyFrames>
+ 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblAppName">
+ 				<DiscreteObjectKeyFrame KeyTime="0">
+ 					<DiscreteObjectKeyFrame.Value>
+ 						<Visibility>Visible</Visibility>
+ 					</DiscreteObjectKeyFrame.Value>
+ 				</DiscreteObjectKeyFrame>
+ 				<DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+ 					<DiscreteObjectKeyFrame.Value>
+ 						<Visibility>Visible</Visibility>
+ 					</DiscreteObjectKeyFrame.Value>
+ 				</DiscreteObjectKeyFrame>
+ 			</ObjectAnimationUsingKeyFrames>
+ 		</Storyboard>
+ 	</phone:PhoneApplicationPage.Resources>
+ 	<phone:PhoneApplicationPage.Background>
+ 		<StaticResource ResourceKey="PhoneChromeBrush"/>
+ 	</phone:PhoneApplicationPage.Background>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneBackgroundBrush}">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+    	</Grid.RowDefinitions>
+        <!--TitlePanel contains the name of the application and page title-->
+
+        <!--ContentPanel - place additional content here-->
+    	<Grid Margin="8,0">
+    		<TextBlock x:Name="txtAbout" Margin="0,24,16,0" TextWrapping="Wrap" Text="© ultrashot 2011-2013" VerticalAlignment="Top" TextAlignment="Right" Tap="txtAbout_Tap" FontFamily="Segoe WP Semibold" FontSize="21.333" Foreground="{StaticResource PhoneBorderBrush}" HorizontalAlignment="Right" Height="80" Width="250"/>
+    		<TextBlock x:Name="lblAppName" Margin="0,15,0,0" TextWrapping="Wrap" Text="XAP Deployer" FontSize="69.333" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Width" Foreground="{StaticResource PhoneContrastBackgroundBrush}" TextOptions.TextHintingMode="Animated" HorizontalAlignment="Center" Visibility="Collapsed">
+    			<TextBlock.Projection>
+    				<PlaneProjection/>
+    			</TextBlock.Projection>
+    		</TextBlock>
+    	</Grid>
+
+<!--ContentPanel - place additional content here-->
+    	<Grid x:Name="ContentPanel" Grid.Row="1" Margin="8,0" Background="{StaticResource PhoneChromeBrush}"></Grid>
+        <wpe:AdvancedApplicationBar x:Name="advancedApplicationBar"  IsVisible="True" IsMenuEnabled="True" Opacity="1" BackgroundColor="{StaticResource PhoneChromeColor}">
+            <wpe:AdvancedApplicationBarIconButton x:Name="btnBrowse" IconUri="/icons/appbar.folder.rest.png" Text="{Binding Resources.txtFileBrowser, Source={StaticResource Localization}}" Click="btnBrowse_Click"/>
+            <wpe:AdvancedApplicationBarMenuItem x:Name="btnAssociate" Text="Файловые ассоциации" Click="btnAssociate_Click" />
+            <wpe:AdvancedApplicationBarMenuItem x:Name="btnAbout" Text="{Binding Resources.txtAbout, Source={StaticResource Localization}}" Click="btnAbout_Click"/>
+        </wpe:AdvancedApplicationBar>
+	</Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+
+</phone:PhoneApplicationPage>

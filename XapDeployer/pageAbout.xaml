@@ -1,0 +1,74 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="XapDeployer.pageAbout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True"
+    Style="{StaticResource TransitionPageStyle}">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="{Binding Path=Resources.txtPageAboutTitle, Source={StaticResource Localization}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+        <Grid x:Name="ContentPanel" Margin="0,-1,0,0" Grid.Row="1">
+        	<Grid>
+        		<ScrollViewer>
+        			<StackPanel Margin="20,0,0,0" VerticalAlignment="Top">
+        				<TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtAppTitle" Text="XAP Deployer " Width="441" FontSize="32" FontFamily="Segoe WP" />
+        				<TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtAppAuthor" Text="© ultrashot 2011-2013" Width="439" FontSize="26.667" />
+        				<TextBlock HorizontalAlignment="Left" Margin="0,20,0,0" x:Name="txtDevoted" Text="{Binding Resources.txtPageAboutDevoted, Source={StaticResource Localization}}" Width="438" Foreground="{StaticResource PhoneContrastBackgroundBrush}" Height="32" FontSize="24" />
+        				<TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" x:Name="txtSpecialThanks" Text="{Binding Resources.txtSpecialThanks, Source={StaticResource Localization}}" Width="447" Foreground="{StaticResource PhoneContrastBackgroundBrush}" TextWrapping="Wrap" FontSize="24" />
+        				<TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtNames" Text="Heathcliff74, HD2Owner" Width="444" FontFamily="Segoe WP" Foreground="{StaticResource PhoneBorderBrush}" FontSize="24" />
+        				<StackPanel Margin="0,20,0,0">
+        					<toolkit:GestureService.GestureListener>
+        						<toolkit:GestureListener 
+        							Tap="GestureListener_Tap"
+								/>
+        					</toolkit:GestureService.GestureListener>
+        					<TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtPleaseNote" Text="{Binding Resources.txtPageAboutPleaseNote, Source={StaticResource Localization}}" Width="309" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontSize="24" />
+        					<TextBlock HorizontalAlignment="Left" x:Name="txtNotice" Text="{Binding Resources.txtPageAboutNotice, Source={StaticResource Localization}}" Width="439" Foreground="{StaticResource PhoneBorderBrush}" TextWrapping="Wrap" FontSize="24" />
+        					<TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtReadMore" Text="{Binding Resources.txtPageAboutReadMore, Source={StaticResource Localization}}" Width="439" Foreground="{StaticResource PhoneAccentBrush}" TextWrapping="Wrap" FontSize="24" FontFamily="Segoe WP" TextDecorations="Underline"/>
+        				</StackPanel>
+                        <TextBlock HorizontalAlignment="Left" Margin="0,20,0,0" x:Name="txtFreeLibrariesUsed" Text="{Binding Resources.txtPageAboutFreeLibraries, Source={StaticResource Localization}}" Width="447" Foreground="{StaticResource PhoneContrastBackgroundBrush}" TextWrapping="Wrap" FontSize="24" />
+        				<TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtLibraryZlib" Text="zlib" Width="95" d:LayoutOverrides="HorizontalAlignment" FontFamily="Segoe WP" Foreground="{StaticResource PhoneBorderBrush}" FontSize="24" />
+        				<TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtLibraryMinizip" Text="minizip" Width="95" d:LayoutOverrides="HorizontalAlignment" FontFamily="Segoe WP" Foreground="{StaticResource PhoneBorderBrush}" FontSize="24" />
+        				<TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtWpExtensions" Text="WP Extensions" Width="451" FontFamily="Segoe WP" Foreground="{StaticResource PhoneBorderBrush}" FontSize="24" />
+                        <TextBlock FontFamily="Segoe WP" FontSize="24" Foreground="{StaticResource PhoneBorderBrush}" x:Name="txtImageTools" Text=".NET Image Tools" Width="451" HorizontalAlignment="Left" />
+                        <TextBlock HorizontalAlignment="Left" Margin="0" x:Name="txtLibrariesThanks" Text="{Binding Resources.txtPageAboutFreeLibrariesThanks, Source={StaticResource Localization}}" Width="438" Foreground="{StaticResource PhoneContrastBackgroundBrush}" Height="32" FontSize="24" />
+                    </StackPanel>
+        		</ScrollViewer>
+        	</Grid>
+        </Grid>
+
+        <!--ContentPanel - place additional content here-->
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

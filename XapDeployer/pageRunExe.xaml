@@ -1,0 +1,108 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
+    x:Class="XapDeployer.pageRunExe"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True"
+    Loaded="PhoneApplicationPage_Loaded"
+    BackKeyPress="PhoneApplicationPage_BackKeyPress"
+    Style="{StaticResource TransitionPageStyle}">
+
+<!--Sample code showing usage of ApplicationBar-->
+<!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>--><!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="BasicStates">
+    			<VisualStateGroup.Transitions>
+    				<VisualTransition GeneratedDuration="0:0:0.5"/>
+    				<VisualTransition From="Normal" GeneratedDuration="0:0:0.25" To="Running">
+    					<Storyboard>
+    						<DoubleAnimation Duration="0:0:0.25" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid"/>
+    						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="performanceProgressBar">
+    							<DiscreteObjectKeyFrame KeyTime="0">
+    								<DiscreteObjectKeyFrame.Value>
+    									<Visibility>Visible</Visibility>
+    								</DiscreteObjectKeyFrame.Value>
+    							</DiscreteObjectKeyFrame>
+    							<DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+    								<DiscreteObjectKeyFrame.Value>
+    									<Visibility>Visible</Visibility>
+    								</DiscreteObjectKeyFrame.Value>
+    							</DiscreteObjectKeyFrame>
+    						</ObjectAnimationUsingKeyFrames>
+    					</Storyboard>
+    				</VisualTransition>
+    				<VisualTransition From="Running" GeneratedDuration="0:0:0.25" To="Normal">
+    					<Storyboard>
+    						<DoubleAnimation Duration="0:0:0.25" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid"/>
+    						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="performanceProgressBar">
+    							<DiscreteObjectKeyFrame KeyTime="0">
+    								<DiscreteObjectKeyFrame.Value>
+    									<Visibility>Collapsed</Visibility>
+    								</DiscreteObjectKeyFrame.Value>
+    							</DiscreteObjectKeyFrame>
+    						</ObjectAnimationUsingKeyFrames>
+    					</Storyboard>
+    				</VisualTransition>
+    			</VisualStateGroup.Transitions>
+    			<VisualState x:Name="Normal"/>
+    			<VisualState x:Name="Running">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="performanceProgressBar">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="grid">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<System:Boolean>False</System:Boolean>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+        	<RowDefinition Height="Auto"/>
+        	<RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+    	<toolkit:PerformanceProgressBar x:Name="performanceProgressBar" Margin="0" IsIndeterminate="True" VerticalAlignment="Top" Visibility="Collapsed"/>
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="24">
+            <TextBlock x:Name="PageTitle" Text="run exe7" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Segoe WP Light" FontSize="26.667"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <ScrollViewer Margin="0,0,0,84">
+            	<TextBlock TextWrapping="Wrap" Text="{Binding Resources.txtNativeWarning, Source={StaticResource Localization}}" Foreground="{StaticResource PhoneAccentBrush}" FontSize="26.667" Margin="24,0" FontFamily="Segoe WP SemiLight"/>
+            </ScrollViewer>
+            <Grid x:Name="grid" Height="72" VerticalAlignment="Bottom" Background="{StaticResource PhoneChromeBrush}">
+            	<Button x:Name="btnRun" Content="{Binding Resources.txtRun, Source={StaticResource Localization}}" Margin="0" Click="btnRun_Click" HorizontalAlignment="Right" Width="240" />
+            </Grid></Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

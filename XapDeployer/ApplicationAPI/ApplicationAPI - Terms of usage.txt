@@ -1,0 +1,16 @@
+ApplicationAPI - Terms of usage
+
+ApplicationAPI is provided AS IS without any warranties.
+Author isn't responsible for any damage to your device and your data.
+
+Terms of usage.
+1) Source code package redistribution, excluding distribution of application source codes using this API.
+2) Source code can be used to build your own applications with it.
+3) Author's name should be always kept.
+4) Applications based on this API cannot be sold.
+5) Author may restrict usage for certain persons who violate these rules. 
+6) Terms of usage should be included in every source code release.
+7) Author can always change terms of usage without any notifications.
+
+
+(C) ultrashot 2011-2013
