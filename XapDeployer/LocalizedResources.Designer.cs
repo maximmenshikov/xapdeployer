@@ -570,7 +570,7 @@ namespace XapDeployer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This project is devoted to S.D..
+        ///   Looks up a localized string similar to 
         /// </summary>
         public static string txtPageAboutDevoted {
             get {

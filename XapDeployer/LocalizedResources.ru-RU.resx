@@ -381,6 +381,6 @@ XAP Deployer не может проверить данное приложени�
     <value>Установить все</value>
   </data>
   <data name="txtPageAboutDevoted" xml:space="preserve">
-    <value>Проект посвящается С.Д.</value>
+    <value> </value>
   </data>
 </root>
